@@ -3,47 +3,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>WAFFLE IT - De quoi raviver vos papilles</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-          <div class="nav-top">
-           <h1 class="logo">Reservia</h1>
-           <a href="#" class="signup">Sinscrire</a>
-       </div>
-       <div class="nav-bottom">
-            <a href="#" class="nav-link active">Hébergements</a>
-            <a href="#" class="nav-link">Activités</a>
-       </div>
-   </nav>
-
-   <section class="main-content">
-
-     <header class="intro-text">
-      <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
-      <p>En plein centre-ville ou en pleine nature</p>
-     </header>
-
-    <div class="search-bar">
-      <input type="text" placeholder="Marseille, France" />
-      <button>Rechercher</button>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <h1 class="loading-title">WAFFLE<span class="accent">IT</span></h1>
+                <div class="loading-subtitle" data-fr="De quoi raviver vos papilles" data-en="What to revive your taste buds">De quoi raviver vos papilles</div>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress" id="loadingProgress"></div>
+            </div>
+            <div class="loading-percent" id="loadingPercent">0%</div>
+        </div>
     </div>
 
-    <div class="filters">
-      <span class="filter-label">Filtres</span>
-      <button class="filter-btn">Économique</button>
-      <button class="filter-btn">Familial</button>
-      <button class="filter-btn">Romantique</button>
-      <button class="filter-btn">Animaux admis</button>
-    </div>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-main">WAFFLE</span><span class="logo-accent">IT</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link" data-fr="ACCUEIL" data-en="HOME">ACCUEIL</a>
+                <a href="#about" class="nav-link" data-fr="À PROPOS" data-en="ABOUT">À PROPOS</a>
+                <a href="#menu" class="nav-link" data-fr="MENU" data-en="MENU">MENU</a>
+                <a href="#gallery" class="nav-link" data-fr="GALERIE" data-en="GALLERY">GALERIE</a>
+                <a href="#contact" class="nav-link" data-fr="CONTACT" data-en="CONTACT">CONTACT</a>
+                <button class="lang-btn" id="langBtn">EN</button>
+            </div>
+        </div>
+    </nav>
 
-    <p class="info-text">
-    <span class="info-icon">i</span>
-    Plus de 500 logements sont disponibles dans cette ville
-  </p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-label" data-fr="GAUFRES ARTISANALES" data-en="ARTISAN WAFFLES">GAUFRES ARTISANALES</div>
+            <h1 class="hero-title">
+                <span class="title-line" data-fr="DE QUOI" data-en="WHAT TO">DE QUOI</span>
+                <span class="title-line accent-line" data-fr="RAVIVER" data-en="REVIVE">RAVIVER</span>
+                <span class="title-line" data-fr="VOS PAPILLES" data-en="YOUR TASTE BUDS">VOS PAPILLES</span>
+            </h1>
+            <div class="hero-cta">
+                <a href="#menu" class="cta-btn primary" data-fr="DÉCOUVRIR" data-en="DISCOVER">DÉCOUVRIR</a>
+                <a href="#contact" class="cta-btn secondary" data-fr="COMMANDER" data-en="ORDER NOW">COMMANDER</a>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <span data-fr="DÉFILER" data-en="SCROLL">DÉFILER</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
 
-  </section>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <div class="section-label" data-fr="À PROPOS" data-en="ABOUT">À PROPOS</div>
+            <h2 class="section-title">
+                <span class="title-word">WAFFLE</span>
+                <span class="title-word accent-word">IT</span>
+            </h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="lead-text" data-fr="Savourez nos délicieuses gaufres croustillantes à l'extérieur et fondantes à l'intérieur, accompagnées de vos toppings préférés." data-en="Enjoy our delicious waffles, crispy on the outside and soft on the inside, with your favorite toppings.">Savourez nos délicieuses gaufres croustillantes à l'extérieur et fondantes à l'intérieur, accompagnées de vos toppings préférés.</p>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-number">01</div>
+                            <h3 data-fr="FRAÎCHEUR" data-en="FRESHNESS">FRAÎCHEUR</h3>
+                            <p data-fr="Préparées à la commande" data-en="Made to order">Préparées à la commande</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">02</div>
+                            <h3 data-fr="QUALITÉ" data-en="QUALITY">QUALITÉ</h3>
+                            <p data-fr="Ingrédients premium" data-en="Premium ingredients">Ingrédients premium</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">03</div>
+                            <h3 data-fr="LIVRAISON" data-en="DELIVERY">LIVRAISON</h3>
+                            <p data-fr="Dès 1000 FCFA" data-en="From 1000 FCFA">Dès 1000 FCFA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="images/waffle1.jpg" alt="Waffle">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="section-container">
+            <div class="section-label" data-fr="NOTRE CARTE" data-en="OUR MENU">NOTRE CARTE</div>
+            <h2 class="section-title">
+                <span class="title-word">MENU</span>
+            </h2>
+            
+            <div class="menu-category">
+                <h3 class="category-title" data-fr="DUO GAUFRES" data-en="WAFFLE DUO">DUO GAUFRES</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-number">01</span>
+                            <h4 data-fr="2 minis gaufres Sucre glace" data-en="2 mini waffles Powdered sugar">2 minis gaufres Sucre glace</h4>
+                        </div>
+                        <div class="item-price">750<span>FCFA</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-number">02</span>
+                            <h4 data-fr="2 minis gaufres Chocolat noisette" data-en="2 mini waffles Chocolate hazelnut">2 minis gaufres Chocolat noisette</h4>
+                        </div>
+                        <div class="item-price">800<span>FCFA</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-number">03</span>
+                            <h4 data-fr="2 minis gaufres Caramel maison" data-en="2 mini waffles Homemade caramel">2 minis gaufres Caramel maison</h4>
+                        </div>
+                        <div class="item-price">800<span>FCFA</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3 class="category-title" data-fr="PACKS GAUFRES" data-en="WAFFLE PACKS">PACKS GAUFRES</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-number">04</span>
+                            <h4 data-fr="Pack 4 gaufres (au choix 2 saveurs)" data-en="Pack 4 waffles (choice of 2 flavors)">Pack 4 gaufres (au choix 2 saveurs)</h4>
+                        </div>
+                        <div class="item-price">2200<span>FCFA</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-number">05</span>
+                            <h4 data-fr="Pack 6 gaufres (choix 2 saveurs uniquement)" data-en="Pack 6 waffles (choice of 2 flavors only)">Pack 6 gaufres (choix 2 saveurs uniquement)</h4>
+                        </div>
+                        <div class="item-price">3500<span>FCFA</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3 class="category-title" data-fr="PACKS GAUFRES + JUS" data-en="WAFFLE + JUICE PACKS">PACKS GAUFRES + JUS</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-number">06</span>
+                            <h4 data-fr="4 gaufres + 1 gobelet bissap" data-en="4 waffles + 1 cup of bissap">4 gaufres + 1 gobelet bissap</h4>
+                        </div>
+                        <div class="item-price">2600<span>FCFA</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <span class="item-number">07</span>
+                            <h4 data-fr="6 gaufres + 2 gobelets bissap" data-en="6 waffles + 2 cups of bissap">6 gaufres + 2 gobelets bissap</h4>
+                        </div>
+                        <div class="item-price">4500<span>FCFA</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="section-container">
+            <div class="section-label" data-fr="GALERIE" data-en="GALLERY">GALERIE</div>
+            <h2 class="section-title">
+                <span class="title-word">NOS</span>
+                <span class="title-word accent-word">CRÉATIONS</span>
+            </h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-index="1">
+                    <img src="images/waffle1.jpg" alt="Waffle 1">
+                    <div class="gallery-overlay">
+                        <span class="gallery-number">01</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="2">
+                    <img src="images/waffle2.jpg" alt="Waffle 2">
+                    <div class="gallery-overlay">
+                        <span class="gallery-number">02</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="3">
+                    <img src="images/waffle3.jpg" alt="Waffle 3">
+                    <div class="gallery-overlay">
+                        <span class="gallery-number">03</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="4">
+                    <img src="images/waffle4.jpg" alt="Waffle 4">
+                    <div class="gallery-overlay">
+                        <span class="gallery-number">04</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="5">
+                    <img src="images/waffle5.jpg" alt="Waffle 5">
+                    <div class="gallery-overlay">
+                        <span class="gallery-number">05</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="6">
+                    <img src="images/waffle6.jpg" alt="Waffle 6">
+                    <div class="gallery-overlay">
+                        <span class="gallery-number">06</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <div class="section-label" data-fr="CONTACT" data-en="CONTACT">CONTACT</div>
+            <h2 class="section-title">
+                <span class="title-word" data-fr="PASSEZ" data-en="PLACE">PASSEZ</span>
+                <span class="title-word accent-word" data-fr="COMMANDE" data-en="ORDER">COMMANDE</span>
+            </h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-label" data-fr="TÉLÉPHONE" data-en="PHONE">TÉLÉPHONE</div>
+                        <a href="tel:696071317" class="info-value">696 07 13 17</a>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label" data-fr="ADRESSE" data-en="ADDRESS">ADRESSE</div>
+                        <div class="info-value">Douala, Logbaba</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label" data-fr="LIVRAISON" data-en="DELIVERY">LIVRAISON</div>
+                        <div class="info-value" data-fr="À partir de 1000 FCFA" data-en="From 1000 FCFA">À partir de 1000 FCFA</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label" data-fr="COMMANDE" data-en="ORDER">COMMANDE</div>
+                        <div class="info-value" data-fr="Un jour avant" data-en="One day in advance">Un jour avant</div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <input type="text" placeholder="NOM" data-placeholder-fr="NOM" data-placeholder-en="NAME" required>
+                        <input type="tel" placeholder="TÉLÉPHONE" data-placeholder-fr="TÉLÉPHONE" data-placeholder-en="PHONE" required>
+                        <textarea placeholder="VOTRE COMMANDE" data-placeholder-fr="VOTRE COMMANDE" data-placeholder-en="YOUR ORDER" rows="5" required></textarea>
+                        <button type="submit" class="submit-btn" data-fr="ENVOYER" data-en="SEND">ENVOYER</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-main">WAFFLE</span><span class="logo-accent">IT</span>
+                    </div>
+                    <p class="footer-tagline" data-fr="De quoi raviver vos papilles" data-en="What to revive your taste buds">De quoi raviver vos papilles</p>
+                </div>
+                
+                <div class="footer-info">
+                    <div class="footer-section">
+                        <h4 data-fr="Contact" data-en="Contact">Contact</h4>
+                        <p>📞 696 07 13 17</p>
+                        <p>📍 Douala, Logbaba</p>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4 data-fr="Horaires" data-en="Hours">Horaires</h4>
+                        <p data-fr="Commande: Un jour avant" data-en="Orders: One day in advance">Commande: Un jour avant</p>
+                        <p data-fr="Livraison: Dès 1000 FCFA" data-en="Delivery: From 1000 FCFA">Livraison: Dès 1000 FCFA</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 WAFFLE IT. <span data-fr="Tous droits réservés." data-en="All rights reserved.">Tous droits réservés.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
